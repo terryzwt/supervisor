@@ -8,4 +8,4 @@ VOLUME /app/web
 WORKDIR /app/web
 ENV LARAVEL_WORKER_NUM 4
 #CMD ["/bin/bash",  "-c", "/usr/bin/supervisord -n -c /etc/supervisor/supervisord.conf"]
-CMD ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisor/supervisord.conf"]
+CMD ["/usr/local/bin/supervisord", "-n", "-c", "/etc/supervisor/supervisord.conf"]
