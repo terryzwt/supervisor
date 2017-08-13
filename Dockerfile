@@ -2,7 +2,7 @@ FROM zterry95/docker-php7:7.1-base
 RUN pecl install redis -y && docker-php-ext-enable redis
 RUN apt-get -y update && apt-get -y install python-pip && pip install supervisor
 #ADD supervisord.conf /etc/supervisor/
-ADD startup.sh /root
+#ADD startup.sh /root
 EXPOSE 9001
 VOLUME /app/web
 WORKDIR /app/web
