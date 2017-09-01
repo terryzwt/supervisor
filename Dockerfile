@@ -1,6 +1,6 @@
 FROM zterry95/docker-php7:7.1-base
 RUN pecl install redis -y && docker-php-ext-enable redis
-RUN pecl install pcntl -y && docker-php-ext-enable pcntl
+RUN /usr/local/bin/docker-php-ext-install pcntl
 RUN apt-get -y update && apt-get -y install python-pip && pip install supervisor
 #ADD supervisord.conf /etc/supervisor/
 #ADD startup.sh /root
